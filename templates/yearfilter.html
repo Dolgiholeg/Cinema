@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/style1.css' %}">
+</head>
+<body>
+<h2>СПИСОК ФИЛЬМОВ</h2>
+<div>
+<table>
+    <tr><td>СТРАНА ПРОИЗВОДИТЕЛЬ</td><td>НАЗВАНИЕ ФИЛЬМА</td><td>ГОД ВЫПУСКА</td></tr>
+    {% for one in kinobase %}
+        <tr>
+        <td>{{ one.country }}</td>
+        <td>{{ one.name}}</td>
+        <td>{{ one.year}}</td>
+        </tr>
+    {% endfor %}
+</table>
+</div>
+    <a href="{% url 'home'  %}"><button>НА ГЛАВНУЮ</button></a>
+</body>
+</html>

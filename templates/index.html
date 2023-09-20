@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/style1.css' %}">
+</head>
+<body>
+<h2> КИНОПОИСК</h2>
+    <a href="{%  url 'spisok' %}"><button>ВЫВЕСТИ ВЕСЬ СПИСОК ФИЛЬМОВ</button></a>
+    <a href="{%  url 'country' %}"><button>ПОИСК ПО СТРАНЕ ПРОИЗВОДИТЕЛЮ</button></a>
+    <a href="{%  url 'year' %}"><button>ПОИСК ПО ГОДУ ВЫПУСКА</button></a>
+    <a href="{%  url 'noyear' %}"><button>ПОИСК ПО ИСКЛЮЧЕНИЮ ГОДА ВЫПУСКА</button></a>
+
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/style1.css' %}">
+</head>
+<body>
+<form action="../countryfilter/" method="post" novalidate>
+{% csrf_token %}
+    {% for f in forma %}
+        {{ f.label_tag }}
+    {{ f }}
+    {{ f.errors }}
+    {% endfor %}
+<input type="submit" value="ПОИСК">
+</form>
+    <a href="{% url 'home'  %}"><button>НА ГЛАВНУЮ</button></a>
+</body>
+</html>
